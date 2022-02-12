@@ -1,0 +1,210 @@
+.text_container {
+  p {
+    word-break: break-word;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 8px;
+    color: $text-black-thin;
+  }
+}
+.details_wrapper {
+  .details_container {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    @include breakpoints(tablet) {
+      width: 100%;
+    }
+    .jobTitle {
+      text-align: center;
+      margin-bottom: 24px;
+      h2 {
+        font-size: 30px;
+        font-weight: 600;
+      }
+    }
+    .jobDetails_wrapper {
+      border-radius: 5px;
+      border: $border-1;
+      background-color: $bg-white;
+      padding: 23px;
+      margin-bottom: 19px;
+      .job_heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        .job_name_company {
+          font-family: $font-family;
+          a {
+            font-size: 18px;
+            font-weight: 600;
+            color: $text-black-thin;
+            h2 {
+              margin-bottom: 8px !important;
+            }
+          }
+          p {
+            font-size: 14px;
+            font-weight: 600;
+            color: $text-gray;
+          }
+        }
+        .company_name {
+          img {
+            max-width: 104px;
+            max-height: 48px;
+          }
+        }
+      }
+      .job_body {
+        margin-bottom: 8px;
+        .office_names {
+          display: flex;
+          align-items: center;
+          margin-bottom: 24px;
+          span {
+            svg {
+              margin-right: 4px;
+              margin-top: 3px;
+              font-size: 14px;
+              color: $text-black-thin;
+            }
+          }
+          p {
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+        .intership_details_container {
+          display: flex;
+          align-items: center;
+          @include breakpoints(largeMobile) {
+            display: inherit;
+          }
+          .details_row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .stipend_text {
+              margin-right: 24px;
+              @include breakpoints(largeMobile) {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                margin-bottom: 12px;
+              }
+              .item_heading {
+                display: flex;
+                align-items: center;
+                svg {
+                  margin-right: 6px;
+                  font-size: 15px;
+                }
+                p {
+                  text-transform: uppercase;
+                  font-size: 13px;
+                  color: $text-gray;
+                  font-weight: 600;
+                  display: block;
+                  @include breakpoints(largeMobile) {
+                    display: none;
+                  }
+                }
+              }
+              .item_body {
+                margin-top: 5px;
+                p {
+                  font-size: 14px;
+                  color: #333;
+                }
+              }
+            }
+          }
+        }
+        .total_applicants {
+          margin-top: 24px;
+          display: flex;
+          align-items: center;
+          span {
+            svg {
+              margin-right: 8px;
+            }
+          }
+          p {
+            font-size: 14px;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .about_company {
+        border-top: $border-1;
+        margin-top: 20px;
+        padding-top: 15px;
+        h2 {
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+      }
+      .about_work,
+      .who_apply,
+      .number_of_vacancy {
+        h2 {
+          font-size: 20px;
+          text-transform: capitalize;
+          margin-top: 20px;
+          padding-top: 15px;
+        }
+        .description {
+          margin-top: 10px;
+          ol {
+            margin-left: 20px;
+            li {
+              font-size: 14px;
+              line-height: 25px;
+            }
+          }
+        }
+      }
+      .skills {
+        h2 {
+          font-size: 20px;
+          text-transform: capitalize;
+          margin-top: 20px;
+          padding-top: 15px;
+        }
+        .skills_list {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          span {
+            background: #f8f8f8;
+            color: #666;
+            padding: 6px 12px;
+            border-radius: 14px;
+            margin-right: 16px;
+            margin-bottom: 8px;
+            line-height: 16px;
+          }
+        }
+      }
+      .apply_button {
+        margin-top: 20px;
+        text-align: center;
+        button {
+          background: $bg-primary;
+          border-radius: 4px;
+          border: 1px solid $text-primary;
+          color: #fff;
+          padding: 8px 32px;
+          font-size: 16px;
+          line-height: 24px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

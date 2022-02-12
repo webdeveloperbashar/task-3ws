@@ -1,0 +1,142 @@
+.joblist_wrapper {
+  border-radius: 5px;
+  border: $border-1;
+  background-color: $bg-white;
+  padding: 23px;
+  margin-bottom: 19px;
+  .job_heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    .job_name_company {
+      font-family: $font-family;
+      a {
+        font-size: 18px;
+        font-weight: 600;
+        color: $text-black-thin;
+        h2 {
+          margin-bottom: 8px !important;
+          text-transform: capitalize;
+        }
+      }
+      p {
+        font-size: 14px;
+        font-weight: 600;
+        color: $text-gray;
+      }
+    }
+    .company_name {
+      img {
+        max-width: 104px;
+        max-height: 48px;
+      }
+    }
+  }
+  .job_body {
+    margin-bottom: 8px;
+    .office_names {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      span {
+        svg {
+          margin-right: 4px;
+          margin-top: 3px;
+          font-size: 14px;
+          color: $text-black-thin;
+        }
+      }
+      p {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    .intership_details_container {
+      display: flex;
+      align-items: center;
+      @include breakpoints(largeMobile) {
+        display: inherit;
+      }
+      .details_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .stipend_text {
+          margin-right: 24px;
+          @include breakpoints(largeMobile) {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            margin-bottom: 12px;
+          }
+          .item_heading {
+            display: flex;
+            align-items: center;
+            svg {
+              margin-right: 6px;
+              font-size: 15px;
+            }
+            p {
+              text-transform: uppercase;
+              font-size: 13px;
+              color: $text-gray;
+              font-weight: 600;
+              display: block;
+              @include breakpoints(largeMobile) {
+                display: none;
+              }
+            }
+          }
+          .item_body {
+            margin-top: 5px;
+            p {
+              font-size: 14px;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+  .job_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    .tags_container {
+      padding: 6px 12px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      span {
+        background: $bg-gray;
+        color: #666;
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 14px;
+        margin-right: 16px;
+        margin-bottom: 8px;
+        line-height: 16px;
+      }
+    }
+    .view_button {
+      a {
+        align-self: center;
+        display: flex;
+        padding: 8px;
+        margin-left: auto;
+        padding-right: 0;
+        text-transform: capitalize;
+        align-items: center;
+        color: $text-primary;
+        font-weight: 600;
+        font-size: 14px;
+        svg {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

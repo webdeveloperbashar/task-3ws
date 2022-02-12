@@ -1,0 +1,282 @@
+@import "../../responsive/breakpoints";
+@mixin sectionHeading {
+  .heading {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    h2 {
+      font-size: 35px;
+      color: white;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-bottom: 10px !important;
+      @include breakpoints(largeMobile) {
+        font-size: 25px;
+      }
+    }
+    p {
+      font-size: 13px;
+      color: white;
+    }
+  }
+}
+.home_wrapper {
+  // hero section scss
+  .hero_section {
+    background: #3c73f1;
+    height: 550px;
+    @include breakpoints(tablet) {
+      height: auto;
+    }
+    .hero_container {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: space-between;
+      padding-top: 40px;
+      font-family: $font-family;
+      @include breakpoints(tablet) {
+        display: inherit;
+      }
+      .left_content {
+        h2 {
+          font-size: 45px;
+          color: white;
+          font-weight: 600;
+          @include breakpoints(largeMobile) {
+            font-size: 30px;
+          }
+        }
+        p {
+          font-size: 13px;
+          color: white;
+          font-weight: 500;
+          margin: 20px 0 !important;
+        }
+        .button {
+          margin-top: 30px !important;
+          button {
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 13px;
+            text-transform: capitalize;
+            outline: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            box-shadow: $box-shadow;
+            &:hover {
+              background-color: white;
+              color: black;
+            }
+          }
+        }
+      }
+      .right_content {
+        text-align: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  //   about section css
+  .about_section {
+    padding: 50px 0;
+    background-color: white;
+    font-family: $font-family;
+    .about_container {
+      display: flex;
+      @include breakpoints(tablet) {
+        display: inherit;
+      }
+      .about_left {
+        .heading_p {
+          font-size: 16px;
+          color: #3c73f1;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+        h2 {
+          font-size: 35px;
+          color: black;
+          font-weight: 600;
+          margin: 10px 0 !important;
+          text-transform: capitalize;
+        }
+        p {
+          font-size: 13px;
+          color: black;
+          font-weight: 500;
+        }
+        .key_Points {
+          margin-top: 10px;
+          ul {
+            list-style: none;
+            li {
+              font-size: 15px;
+              margin-bottom: 4px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .about_right {
+        @include breakpoints(tablet) {
+          margin-top: 30px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  //   feature section
+  .feature_wrapper {
+    padding: 50px 0;
+    .feature_container {
+      @include sectionHeading();
+      .heading {
+        h2 {
+          color: black;
+        }
+        p {
+          color: black;
+        }
+      }
+      .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+        @include breakpoints(tablet) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoints(largeMobile) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .feature_box {
+          padding: 20px;
+          text-align: center;
+          box-shadow: $box-shadow;
+          border: $border-1;
+          .icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+            padding: 5px;
+            margin: auto;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 1px 9px #d2d2d2;
+            margin-bottom: 20px;
+            svg {
+              font-size: 25px;
+              color: #3c73f1;
+            }
+          }
+          .desc {
+            h2 {
+              font-size: 25px;
+              font-weight: 600;
+              color: black;
+              margin-bottom: 5px !important;
+            }
+            p {
+              font-size: 13px;
+              font-weight: 500;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+  //   demo section
+  .demo_wrapper {
+    padding: 80px 0;
+    background-image: linear-gradient(45deg, #3c73f1, #3c73f1),
+      url("../../../assets/img/demo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .demo_container {
+      @include sectionHeading();
+    }
+  }
+  //   outstanding section
+  .outstanding_wrapper {
+    padding: 50px 0;
+    .outstanding_container {
+      @include sectionHeading();
+      .heading {
+        h2 {
+          color: black;
+        }
+        p {
+          color: black;
+        }
+      }
+      .content {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        @include breakpoints(tablet) {
+          display: inherit;
+        }
+        .left {
+          margin-right: 20px;
+          .other_box {
+            display: flex;
+            @include breakpoints(portraitTablet) {
+              display: inherit;
+            }
+            .coreFeature_box {
+              margin: 10px;
+              padding: 10px;
+              height: 85px;
+              border: $border-1;
+              box-shadow: $box-shadow;
+              @include breakpoints(portraitTablet) {
+                height: auto;
+              }
+              .icon {
+                display: flex;
+                align-items: center;
+                span {
+                  svg {
+                    margin-right: 10px;
+                    color: #3c73f1;
+                  }
+                }
+                h2 {
+                  font-size: 20px;
+                  font-weight: 600;
+                }
+              }
+              .desc {
+                margin-top: 15px !important;
+                p {
+                  font-size: 13px;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+        .right {
+          @include breakpoints(tablet) {
+            margin-top: 30px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../responsive/breakpoints";
+body {
+  background-color: $bg-body !important;
+  font-family: $font-family;
+  user-select: none;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  max-width: 1170px !important;
+  margin: auto;
+  @include breakpoints(largeLaptop){
+    padding: 0 20px;
+  }
+}

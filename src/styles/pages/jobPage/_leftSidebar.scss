@@ -1,0 +1,76 @@
+select {
+  appearance: none;
+  outline: none;
+}
+.backdrop {
+  position: fixed;
+  background: #00000052;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  @include breakpoints(semiTablet) {
+    display: block;
+  }
+}
+.heading {
+  margin-bottom: 20px;
+  text-align: center;
+  h2 {
+    font-size: 20px;
+  }
+}
+.sidebar_element {
+  .title {
+    border-bottom: $border-1;
+    padding-bottom: 10px;
+    h2 {
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
+}
+.category_wrapper {
+  .category {
+    margin-top: 15px;
+    .form-check {
+      display: block;
+      min-height: 1.5rem;
+      margin-bottom: 0.125rem;
+      font-size: 14px;
+      font-weight: 600;
+      color: $text-gray;
+      input {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.location_wrapper {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .location_field {
+    margin-top: 15px;
+  }
+}
+.workHome_wrapper,
+.partTime_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h3 {
+    font-size: 14px;
+  }
+}
+.price_wrapper {
+  margin-top: 15px;
+  .price_slider {
+    margin-top: 15px;
+  }
+}
+.durations_wrapper {
+  margin-top: 40px;
+}

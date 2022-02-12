@@ -1,0 +1,33 @@
+header {
+  padding: 10px 0;
+  border-bottom: $border-1;
+  box-shadow: $box-shadow;
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      h2 {
+        font-size: 28px;
+        font-family: $font-family;
+        cursor: pointer;
+      }
+    }
+    .menu {
+      ul {
+        float: right;
+        list-style: none;
+        li {
+          display: inline-block;
+          margin-left: 20px;
+          a {
+            font-size: 14px;
+            font-family: $font-family !important;
+            font-weight: 600;
+            color: $text-black-thin;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+// responsive css
+@import "../../responsive/breakpoints";
+@import "./leftSidebar";
+@import "./jobLists";
+.job_wrapper {
+  .job_containers {
+    display: table;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    @include breakpoints(smLaptop) {
+      width: 100%;
+    }
+    .leftSidebar {
+      border-radius: 5px;
+      border: $border-1;
+      background: $bg-white;
+      width: 25%;
+      padding: 23px;
+      float: left;
+      height: 445px;
+      overflow: auto;
+      transition: all 0.3s ease-in-out;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #dcdada;
+      }
+      @include breakpoints(semiTablet) {
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        height: 134vh;
+        width: 300px;
+        max-width: 100%;
+        overflow: auto;
+        transform: translateX(-350px);
+      }
+    }
+    .active {
+      transform: translateX(0px);
+      transition: all 0.3s ease-in-out;
+    }
+    .job_lists {
+      width: 68%;
+      float: right;
+      @include breakpoints(semiTablet) {
+        width: 100%;
+      }
+    }
+  }
+  .bar {
+    position: fixed;
+    left: 0px;
+    right: 0;
+    top: 45%;
+    background: $bg-gray;
+    width: 25px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $box-shadow;
+    display: none;
+    @include breakpoints(semiTablet) {
+      display: block;
+    }
+    svg {
+      font-size: 17px;
+    }
+  }
+}
