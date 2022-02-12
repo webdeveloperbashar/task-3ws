@@ -4,6 +4,9 @@
     text-align: center;
     width: 60%;
     margin: auto;
+    @include breakpoints(largeMobile) {
+      width: 100%;
+    }
     h2 {
       font-size: 35px;
       color: white;
